@@ -1,0 +1,289 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.010052980093993564 0.9925170974229407 0.12169120311004558 3.255248086683231
+  position -0.27454342302550977 1.4748608287394773 -3.303494181585843
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 6 6
+}
+Robot {
+  translation -0.19611157781279814 0.41177555020029855 -0.14821298488812368
+  rotation 0.6099995722520344 0.6530805661531113 0.44876084495582597 0.02214927549053101
+  children [
+    Solid {
+      children [
+        DEF rear_left HingeJoint {
+          jointParameters HingeJointParameters {
+            position -1.0581827669349508
+            axis 0 0 1
+            anchor -0.225 0 -0.1
+          }
+          device [
+            RotationalMotor {
+              name "shoulder left rear"
+              maxTorque 30
+            }
+          ]
+          endPoint Solid {
+            translation -0.3558775479182711 -0.07344166521253315 -0.10996856158182006
+            rotation -1.998278390009113e-05 9.577703986552626e-06 -0.9999999997544778 1.0581827710863285
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 1.626379753524548
+                  axis 0 0 1
+                  anchor 0 -0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "elbow left rear"
+                    maxTorque 30
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.14967746055088338 -0.14168317214060186 6.438885054681208e-05
+                  rotation -1.155878612723053e-05 -5.6139371421686944e-05 0.9999999983573825 1.626379741121712
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        baseColor 1 1 0
+                      }
+                      geometry DEF leg_box Box {
+                        size 0.05 0.3 0.02
+                      }
+                    }
+                  ]
+                  boundingObject USE leg_box
+                  physics Physics {
+                  }
+                }
+              }
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                }
+                geometry DEF leg_box Box {
+                  size 0.05 0.3 0.02
+                }
+              }
+            ]
+            name "solid(3)"
+            boundingObject USE leg_box
+            physics Physics {
+            }
+          }
+        }
+        DEF rear_right HingeJoint {
+          jointParameters HingeJointParameters {
+            position -0.5681825244440104
+            axis 0 0 1
+            anchor -0.225 0 0.1
+          }
+          device [
+            RotationalMotor {
+              name "shoulder right rear"
+              maxTorque 30
+            }
+          ]
+          endPoint Solid {
+            translation -0.30574734896355715 -0.12648589358126344 0.11005120008154276
+            rotation -0.00017419278124666324 0.0003903538054049367 -0.9999999086403866 0.5681824774922039
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 1.6484834486452349
+                  axis 0 0 1
+                  anchor 0 -0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "elbow right rear"
+                    maxTorque 30
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.14964749624814705 -0.13839904549002485 -2.626605125988224e-05
+                  rotation 2.7581295744432958e-06 -3.921944178155568e-06 0.9999999999885056 1.6484834482030417
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        baseColor 1 1 0
+                      }
+                      geometry DEF leg_box Box {
+                        size 0.05 0.3 0.02
+                      }
+                    }
+                  ]
+                  boundingObject USE leg_box
+                  physics Physics {
+                  }
+                }
+              }
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                }
+                geometry DEF leg_box Box {
+                  size 0.05 0.3 0.02
+                }
+              }
+            ]
+            name "solid(2)"
+            boundingObject USE leg_box
+            physics Physics {
+            }
+          }
+        }
+        DEF front_left HingeJoint {
+          jointParameters HingeJointParameters {
+            position -0.5682152205645905
+            axis 0 0 1
+            anchor 0.225 0 -0.1
+          }
+          device [
+            RotationalMotor {
+              name "shoulder left front"
+              maxTorque 30
+            }
+          ]
+          endPoint Solid {
+            translation 0.14434379283029922 -0.12636612480716797 -0.10991962060658751
+            rotation -0.0002183898693650451 0.00035742720334166296 -0.9999999122758259 0.5682151751650535
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 1.6263921574425948
+                  axis 0 0 1
+                  anchor 0 -0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "elbow left front"
+                    maxTorque 30
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.14979295726251263 -0.1416146553983931 9.267042908939205e-05
+                  rotation -1.9116505705513443e-05 -0.00011903885273167555 0.9999999927321556 1.6263920236026381
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        baseColor 1 1 0
+                      }
+                      geometry Box {
+                        size 0.05 0.3 0.02
+                      }
+                    }
+                  ]
+                  boundingObject Box {
+                    size 0.05 0.3 0.02
+                  }
+                  physics Physics {
+                  }
+                }
+              }
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                }
+                geometry DEF leg_box Box {
+                  size 0.05 0.3 0.02
+                }
+              }
+            ]
+            name "solid(1)"
+            boundingObject USE leg_box
+            physics Physics {
+            }
+          }
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 0
+          }
+          geometry DEF Body Box {
+            size 0.5 0.1 0.2
+          }
+        }
+        DEF front_right HingeJoint {
+          jointParameters HingeJointParameters {
+            position -1.0581715035258812
+            axis 0 0 1
+            anchor 0.225 0 0.1
+          }
+          device [
+            RotationalMotor {
+              name "shoulder right front"
+              maxTorque 30
+            }
+          ]
+          endPoint Solid {
+            translation 0.09427466095168138 -0.07361496000307025 0.10996798342716241
+            rotation 7.84605915170765e-05 -0.00020348348758116055 -0.9999999762192028 1.0581716862383754
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 1.6263838164341544
+                  axis 0 0 1
+                  anchor 0 -0.15 0
+                }
+                device [
+                  RotationalMotor {
+                    name "elbow right front"
+                    maxTorque 30
+                  }
+                ]
+                endPoint Solid {
+                  translation 0.14985922263044657 -0.14173630164813042 1.0198615357573377e-05
+                  rotation -2.1672109182100877e-06 -5.0033880913980386e-05 0.9999999987459569 1.6263838069650283
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                        baseColor 1 1 0
+                      }
+                      geometry Box {
+                        size 0.05 0.3 0.02
+                      }
+                    }
+                  ]
+                  boundingObject Box {
+                    size 0.05 0.3 0.02
+                  }
+                  physics Physics {
+                  }
+                }
+              }
+              DEF upper_leg_ Shape {
+                appearance PBRAppearance {
+                  baseColor 1 0 0
+                }
+                geometry DEF leg_box Box {
+                  size 0.05 0.3 0.02
+                }
+              }
+            ]
+            boundingObject USE leg_box
+            physics Physics {
+            }
+          }
+        }
+      ]
+      boundingObject USE Body
+      physics Physics {
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "quad_proper_walk"
+  linearVelocity 0.0002543244336033321 0.00015226218923689882 -0.0005322150131704959
+  angularVelocity -0.0012538260820764663 0.00021650708952679018 -0.0002868643824049243
+}
